@@ -161,3 +161,22 @@ input:focus-within {
   width: 1.2em;
   height: 1.2em;
 }
+
+
+/* adding screen size responsiveness */
+
+/* small phones */
+@media (max-width: 480px) {
+  .nav__link {
+    display: none;
+  }  
+  .content__wrapper {
+    margin-top: 40px !important;
+  }
+  input {
+    max-width: 360px;
+  }
+  .input__wrap {
+    max-width: 360px;
+  }
+}
