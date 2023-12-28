@@ -266,7 +266,7 @@ input:focus-within {
 
 /* adding screen size responsiveness */
 
-/* small phones */
+/* LARGE SMARTPHONES */
 @media (max-width: 550px) {
   .nav__link {
     display: none;
@@ -286,5 +286,16 @@ input:focus-within {
   }
   .row {
     max-width: 420px;
+  }
+}
+
+/* SMALL SMARTPHONES */
+
+@media (max-width: 400px) {
+  .row {
+    max-width: 320px;
+  }
+  .results__wrapper {
+    flex-direction:column-reverse;
   }
 }
