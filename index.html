@@ -3,57 +3,71 @@
 
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>LMN-OMDb__API</title>
   <link rel="stylesheet" href="./style.css">
+  <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+  <script src="app.js"></script>
 </head>
 
 <body>
-  <div class="container">
-    <section id="landing">
-      <div class="row">
-        <nav>
-          <a href="#" class="nav__logo">
-            <img class="logo logo__text" src="./assets/lemon.svg" alt="logo">
-            lmn
-          </a>
-          <div class="nav__links">
-            <a href="#" class="nav__link">Home</a>
-            <a href="#" class="nav__link btn-premium">Join Premium</a>
-            <a href="#" class="nav__link btn-contact">Contact</a>
-            <div class="nav__mobile--bars">
-              <svg xmlns="http://www.w3.org/2000/svg" height="28" width="28" viewBox="0 0 448 512" class="fa-bars">
-                <path fill="currentColor" d="M16 132h416c8.8 0 16-7.2 16-16V76c0-8.8-7.2-16-16-16H16C7.2 60 0 67.2 0 
-                  76v40c0 8.8 7.2 16 16 16zm0 160h416c8.8 0 16-7.2 16-16v-40c0-8.8-7.2-16-16-16H16c-8.8 
-                  0-16 7.2-16 16v40c0 8.8 7.2 16 16 16zm0 160h416c8.8 0 16-7.2 16-16v-40c0-8.8-7.2-16-16-16H16c-8.8 
-                  0-16 7.2-16 16v40c0 8.8 7.2 16 16 16z" />
-              </svg>
-            </div>
+  <section id="landing">
+    <div class="nav__container">
+      <nav>
+        <a href="#" class="nav__logo">
+          <img class="logo logo__text" src="./assets/lemon.svg" alt="logo">
+          lmn
+        </a>
+        <ul class="nav__links">
+          <li><a href="#" class="nav__link">Home</a></li>
+          <li><a href="#" class="nav__link btn-premium">Join Premium</a></li>
+          <li><a href="#" class="nav__link btn-contact">Contact</a></li>
+        </ul>
+        <button class="btn__menu" onclick="openMenu()">
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="menu__backdrop">
+          <button class="btn__menu btn__menu--close" onclick="closeMenu()">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+      </nav>
+      <div class="content__wrapper" style="margin-top: 15px;">
+        <h1 class="title">browse our movies</h1>
+        <div class="input__wrap">
+          <input type="text" placeholder="Search by Title, Genre, or Keyword">
+          <div class="search__wrapper">
+            <i class="fas fa-search"></i>
           </div>
-        </nav>
-        <div class="content__wrapper" style="margin-top: 15px;">
-          <h1 class="title">browse our movies</h1>
-          <div class="input__wrap">
-            <input type="text" placeholder="Search by Title, Genre, or Keyword">
-            <div class="search__wrapper">
-              <svg data-v-390ceb07="" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search"
-                role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
-                class="svg-inline--fa fa-search fa-w-16">
-                <path data-v-390ceb07="" fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 
-                  93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 
-                  6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 
-                  336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 
-                  128-128 128z"></path>
-              </svg>
-            </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main>
+    <section id="search">
+      <div class="container">
+        <div class="row">
+          <div class="results__header">
+            <h1 class="search__results">Search results:</h1>
+            <select id="filter">
+              <option value="" disabled selected>Filter</option>
+              <option value="Year">Year</option>
+              <option value="imdbRating">Rating, High to Low</option>
+            </select>
+          </div>
+          <div class="movies movies__loading">
+            <i class="fas fa-spinner movies__loading--spinner"></i>
           </div>
         </div>
       </div>
     </section>
-    <section id="search">
+  </main>
 
-    </section>
-  </div>
+  <footer>
+
+  </footer>
 </body>
 
 </html>
