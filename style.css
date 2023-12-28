@@ -122,7 +122,7 @@ NAV
 
 .menu__backdrop {
   position: absolute;
-  background-color: #242424;
+  background-color: #353839;
   top: 0;
   left: 0;
   right: 0;
@@ -237,6 +237,32 @@ input:focus-within {
   height: 1.2em;
 }
 
+.row {
+  width: 100%;
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.results__wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 28px 0;
+}
+
+.results__title {
+  font-weight: 600;
+  font-size: 20px;
+}
+
+#filter {
+  border: 1.5px solid;
+  border-radius: 9999px;
+  padding: 6px;
+}
+#filter:hover {
+  cursor: pointer;
+}
+
 
 /* adding screen size responsiveness */
 
@@ -257,5 +283,8 @@ input:focus-within {
   }
   .input__wrap {
     max-width: 360px;
+  }
+  .row {
+    max-width: 420px;
   }
 }
