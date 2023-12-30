@@ -14,40 +14,40 @@
 <body>
   <section id="landing">
     <div class="nav__container">
-      <nav>
-        <a href="#" class="nav__logo">
-          <img class="logo logo__text" src="./assets/lemon.svg" alt="logo">
-          lmn
-        </a>
-        <ul class="nav__links">
-          <li><a href="#" class="nav__link">Home</a></li>
-          <li><a href="#" class="nav__link btn-premium">Join Premium</a></li>
-          <li><a href="#" class="nav__link btn-contact">Contact</a></li>
-        </ul>
-        <button class="btn__menu" onclick="openMenu()">
-          <i class="fas fa-bars"></i>
-        </button>
-        <div class="menu__backdrop">
-          <button class="btn__menu btn__menu--close" onclick="closeMenu()">
-            <i class="fas fa-times"></i>
-          </button>
-          <ul class="menu__links">
-            <li class="menu__list">
-              <a href="#" class="menu__link" onclick="closeMenu()">Home</a>
-            </li>
-            <li class="menu__list">
-              <a href="" class="menu__link" onclick="closeMenu()">Join Premium</a>
-            </li>
-            <li class="menu__list">
-              <a href="" class="menu__link" onclick="closeMenu()">Contact</a>
-            </li>
-          </ul>
+        <div class="nav__wrapper">
+            <a href="#" class="nav__logo">
+              <img class="logo logo__text" src="./assets/lemon.svg" alt="logo">
+              lmn
+            </a>
+            <ul class="nav__links">
+              <li><a href="#" class="nav__link">Home</a></li>
+              <li><a href="#" class="nav__link btn-premium">Join Premium</a></li>
+              <li><a href="#" class="nav__link btn-contact">Contact</a></li>
+            </ul>
+            <button class="btn__menu" onclick="openMenu()">
+              <i class="fas fa-bars"></i>
+            </button>
+            <div class="menu__backdrop">
+              <button class="btn__menu btn__menu--close" onclick="closeMenu()">
+                <i class="fas fa-times"></i>
+              </button>
+              <ul class="menu__links">
+                <li class="menu__list">
+                  <a href="#" class="menu__link" onclick="closeMenu()">Home</a>
+                </li>
+                <li class="menu__list">
+                  <a href="" class="menu__link" onclick="closeMenu()">Join Premium</a>
+                </li>
+                <li class="menu__list">
+                  <a href="" class="menu__link" onclick="closeMenu()">Contact</a>
+                </li>
+              </ul>
+            </div>
         </div>
-      </nav>
       <div class="content__wrapper" style="margin-top: 15px;">
         <h1 class="title">browse our movies</h1>
         <div class="input__wrap">
-          <input type="text" placeholder="Search by Title, Genre, or Keyword">
+          <input type="text" class="input__txt" placeholder="Search by Title, Genre, or Keyword">
           <div class="search__wrapper">
             <i class="fas fa-search"></i>
           </div>
