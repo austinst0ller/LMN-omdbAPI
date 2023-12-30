@@ -158,7 +158,7 @@ NAV
 .menu__links {
   display: flex;
   flex-direction: column;
-  margin-bottom: 24rem;
+  margin-bottom: 16rem;
 }
 
 .menu__list {
