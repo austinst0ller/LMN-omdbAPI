@@ -14,36 +14,36 @@
 <body>
   <section id="landing">
     <div class="nav__container">
-        <div class="nav__wrapper">
-            <a href="#" class="nav__logo">
-              <img class="logo logo__text" src="./assets/lemon.svg" alt="logo">
-              lmn
-            </a>
-            <ul class="nav__links">
-              <li><a href="#" class="nav__link">Home</a></li>
-              <li><a href="#" class="nav__link btn-premium">Join Premium</a></li>
-              <li><a href="#" class="nav__link btn-contact">Contact</a></li>
-            </ul>
-            <button class="btn__menu" onclick="openMenu()">
-              <i class="fas fa-bars"></i>
-            </button>
-            <div class="menu__backdrop">
-              <button class="btn__menu btn__menu--close" onclick="closeMenu()">
-                <i class="fas fa-times"></i>
-              </button>
-              <ul class="menu__links">
-                <li class="menu__list">
-                  <a href="#" class="menu__link" onclick="closeMenu()">Home</a>
-                </li>
-                <li class="menu__list">
-                  <a href="" class="menu__link" onclick="closeMenu()">Join Premium</a>
-                </li>
-                <li class="menu__list">
-                  <a href="" class="menu__link" onclick="closeMenu()">Contact</a>
-                </li>
-              </ul>
-            </div>
+      <div class="nav__wrapper">
+        <a href="#" class="nav__logo">
+          <img class="logo logo__text" src="./assets/lemon.svg" alt="logo">
+          lmn
+        </a>
+        <ul class="nav__links">
+          <li><a href="#" class="nav__link">Home</a></li>
+          <li><a href="#" class="nav__link btn-premium">Join Premium</a></li>
+          <li><a href="#" class="nav__link btn-contact">Contact</a></li>
+        </ul>
+        <button class="btn__menu" onclick="openMenu()">
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="menu__backdrop">
+          <button class="btn__menu btn__menu--close" onclick="closeMenu()">
+            <i class="fas fa-times"></i>
+          </button>
+          <ul class="menu__links">
+            <li class="menu__list">
+              <a href="#" class="menu__link" onclick="closeMenu()">Home</a>
+            </li>
+            <li class="menu__list">
+              <a href="" class="menu__link" onclick="closeMenu()">Join Premium</a>
+            </li>
+            <li class="menu__list">
+              <a href="" class="menu__link" onclick="closeMenu()">Contact</a>
+            </li>
+          </ul>
         </div>
+      </div>
       <div class="content__wrapper" style="margin-top: 15px;">
         <h1 class="title">browse our movies</h1>
         <div class="input__wrap">
@@ -65,11 +65,25 @@
             <select id="filter">
               <option value="" disabled selected>Filter</option>
               <option value="Year">Year</option>
-              <option value="imdbRating">Rating, High to Low</option>
+              <option value="imdbRating">Rating</option>
             </select>
           </div>
-          <div class="movies movies__loading">
+          <div class="movies__loading">
             <i class="fas fa-spinner movies__loading--spinner"></i>
+          </div>
+
+          <div class="movies__list">
+            <div class="movies">
+              <div class="movie__card">
+                <div class="movie__card--container">
+                  <h3>Movie Title</h3>
+                  <p><b>Year:</b>0000</p>
+                  <p><b>Rating:</b>xxxxx</p>
+                  <p><b>Runtime:</b>xxxxx</p>
+                  <p><b>Genre:</b>xxxxx</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
