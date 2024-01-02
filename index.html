@@ -8,7 +8,8 @@
   <title>LMN-OMDb__API</title>
   <link rel="stylesheet" href="./style.css">
   <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
-  <script src="app.js"></script>
+  <script src="index.js"></script>
+  <script src="movies.js" defer></script>
 </head>
 
 <body>
@@ -47,8 +48,8 @@
       <div class="content__wrapper" style="margin-top: 15px;">
         <h1 class="title">browse our movies</h1>
         <div class="input__wrap">
-          <input type="text" class="input__txt" placeholder="Search by Title, Genre, or Keyword">
-          <div class="search__wrapper">
+          <input type="search" class="input__txt" placeholder="Search...">
+          <div class="search__icon--wrapper">
             <i class="fas fa-search"></i>
           </div>
         </div>
@@ -72,19 +73,13 @@
             <i class="fas fa-spinner movies__loading--spinner"></i>
           </div>
 
-          <div class="movies__list">
-            <div class="movies">
-              <div class="movie__card">
-                <div class="movie__card--container">
-                  <h3>Movie Title</h3>
-                  <p><b>Year:</b>0000</p>
-                  <p><b>Rating:</b>xxxxx</p>
-                  <p><b>Runtime:</b>xxxxx</p>
-                  <p><b>Genre:</b>xxxxx</p>
-                </div>
-              </div>
+          <template movie-data-template>
+            <div class="movie__card">
+              <div class="movie__card-poster"></div>
+              <div class="movie__card-header"></div>
+              <div class="movie__card-body"></div>
             </div>
-          </div>
+          </template>
         </div>
       </div>
     </section>
